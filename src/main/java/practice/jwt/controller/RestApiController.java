@@ -24,4 +24,19 @@ public class RestApiController {
         userService.join(request);
         return "회원가입완료";
     }
+
+    @GetMapping("/api/v1/users")
+    public String user() {
+        return "user";
+    }
+
+    @GetMapping("/api/v1/managers")
+    public String manager() {
+        return "manager";
+    }
+
+    @GetMapping("/api/v1/admins")
+    public String admin() {
+        return "admin";
+    }
 }
