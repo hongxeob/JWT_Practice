@@ -7,12 +7,16 @@ import practice.jwt.model.User;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class PrincipalDetails implements UserDetails {
+public class LoginUser implements UserDetails {
 
     private User user;
 
-    public PrincipalDetails(User user) {
+    public LoginUser(User user) {
         this.user = user;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     @Override
