@@ -1,5 +1,6 @@
 package practice.jwt.model;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -22,6 +23,14 @@ public class User {
     private String username;
     private String password;
     private String roles;
+
+
+    @Builder
+    public User(String username, String password, String roles) {
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
 
     public List<String> getRoleList() {
         if (this.roles.length() > 0) {
